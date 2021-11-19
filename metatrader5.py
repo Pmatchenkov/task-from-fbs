@@ -20,8 +20,8 @@ def get_prices_for_whole_period():
     high_price = rates_frame[[HIGH]]
     low_price = rates_frame[[LOW]]
     bar_size = high_price[HIGH] - low_price[LOW]
-    print(f'Максимальная свеча за весь период: {round(bar_size.max(), round_num)}')
-    print(f'Минимальная свеча за весь период: {round(bar_size.min(), round_num)}')
+    print('Максимальная свеча за весь период: {round(bar_size.max(), round_num)}')
+    print('Минимальная свеча за весь период: {round(bar_size.min(), round_num)}')
 
 
 def get_prices_for_quarter(year, time_from, time_to, quarter):
@@ -49,6 +49,7 @@ def get_prices_for_quarters():
 if not mt5.initialize():
     print(f'Ошибка инициализации MetaTrader5: {mt5.last_error()}')
     quit()
+
 
 print('Найти максимальную и минимальную свечи на весь период по EURUSD')
 get_prices_for_whole_period()
