@@ -1,3 +1,4 @@
+#merge request update1
 from datetime import datetime
 import MetaTrader5 as mt5
 import pandas
